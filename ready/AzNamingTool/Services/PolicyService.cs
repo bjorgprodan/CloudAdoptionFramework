@@ -61,7 +61,7 @@ namespace AzureNamingTool.Services
                     }
                 }
 
-                var property = new PolicyProperty("Name Validation", "This policy enables you to restrict the name can be specified when deploying a Azure Resource.");
+                var property = new PolicyProperty("Name Validation", "This policy enforce a naming convention by restricting the name that can be specified when deploying an Azure Resource.");
                 property.PolicyRule = PolicyRuleFactory.GetNameValidationRules(validations.Select(x => new PolicyRule(x, delimiter)).ToList(), delimiter);
                 PolicyDefinition definition = new(property);
 
